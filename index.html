@@ -20,7 +20,7 @@
     </form>
     <script src="/socket.io/socket.io.js"></script>
     <script>
-    var socket = io('ws://access-app-conection-server.herokuapp.com');
+    var socket = io('ws://access-app-conection-server.herokuapp.com:3000');
     socket.emit('getClientId', 'mybookings', function(clientId){
         console.log(clientId);
     });
