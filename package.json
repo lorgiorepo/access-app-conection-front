@@ -1,0 +1,10 @@
+
+{
+    "name": "access-app-conection-front",
+    "version": "0.0.1",
+    "description": "Access App Conection Fromt",
+    "dependencies": {
+        "express": "^4.15.2",
+        "socket.io": "^2.2.0"
+    }
+}
