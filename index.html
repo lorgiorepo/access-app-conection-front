@@ -20,7 +20,16 @@
     </form>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"></script>
     <script>
-    var socket = io('wss://access-app-conection-server.herokuapp.com');
+    var socket = io('wss://access-app-conection-server.herokuapp.com', {
+      transportOptions: {
+        polling: {
+          extraHeaders: {
+            'x-clientid': 'abc',
+            'origin': 'hackeado'
+          }
+        }
+      }
+    });
     socket.emit('getClientId', 'mybookings', function(clientId){
         console.log(clientId);
     });
